@@ -6,7 +6,7 @@
 
 valor1=0
 cuit=[]
-num=[5, 4, 3, 2, 7, 6, 5, 4, 3, 2, 0]
+num=[5, 4, 3, 2, 7, 6, 5, 4, 3, 2]
 
 for k in range(11): 
     inuser= int(input("Ingrese su CUIT/CUIL: "))
