@@ -4,6 +4,29 @@
 #LISTAS
 ####################
 
+valor1=0
+cuit=[]
+num=[5, 4, 3, 2, 7, 6, 5, 4, 3, 2, 0]
+
+for k in range(11): 
+    inuser= int(input("Ingrese su CUIT/CUIL: "))
+    cuit.append(inuser)
+for x in range(10):
+    aux1 = cuit[x]*num[x]
+    valor1 = aux1+valor1
+valor2= valor1%11
+valor3= 11-valor2
+if valor3==11:
+    digitoV=0
+if valor3==10:
+    digitoV=9
+else:
+    digitoV=valor3
+print ("El digito verificador es: ", digitoV)
+
+####################
+
+
 lista=[]
 for x in range(5):
     num= int(input("Ingrese un numero: "))
