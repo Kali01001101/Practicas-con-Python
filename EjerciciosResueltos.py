@@ -16,10 +16,11 @@ for x in range(10):
     valor1 = aux1+valor1
 valor2= valor1%11
 valor3= 11-valor2
+
 if valor3==11:
     digitoV=0
-if valor3==10:
-    digitoV=9
+elif valor3==10:
+	digitoV=9
 else:
     digitoV=valor3
 if digitoV==cuit[10]:
