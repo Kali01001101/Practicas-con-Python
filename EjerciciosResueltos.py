@@ -22,7 +22,10 @@ if valor3==10:
     digitoV=9
 else:
     digitoV=valor3
-print ("El digito verificador es: ", digitoV)
+if digitoV==cuit[10]:
+	print("Muchas gracias")
+else:
+	print("Revise el CUIT/CUIL ingresado")
 
 ####################
 
