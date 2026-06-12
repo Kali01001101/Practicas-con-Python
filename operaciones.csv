@@ -1,0 +1,13 @@
+id,fecha_apertura,fecha_cierre,estrategia,activo,direccion,timeframe,precio_entrada,stop_loss,take_profit,precio_salida,riesgo_usd,resultado_usd,motivo_salida,notas
+1,2026-05-04,2026-05-04,Ruptura Londres,EURUSD,long,M15,1.0750,1.0730,1.0790,1.0790,100,200,TP,Ruptura limpia del rango asiatico
+2,2026-05-05,2026-05-05,Ruptura Londres,EURUSD,long,M15,1.0810,1.0790,1.0850,1.0790,100,-100,SL,Falsa ruptura
+3,2026-05-06,2026-05-06,Pullback EMA,XAUUSD,long,H1,2310.0,2300.0,2335.0,2335.0,100,250,TP,Pullback a EMA20 en tendencia alcista
+4,2026-05-07,2026-05-07,Reversion Rango,GBPUSD,short,M30,1.2680,1.2700,1.2640,1.2700,100,-100,SL,Rompio el rango en contra
+5,2026-05-08,2026-05-08,Ruptura Londres,EURUSD,short,M15,1.0760,1.0780,1.0720,1.0720,100,200,TP,Buen volumen en la ruptura
+6,2026-05-11,2026-05-11,Pullback EMA,XAUUSD,long,H1,2325.0,2315.0,2350.0,2330.0,100,50,manual,Cerre antes por noticia FOMC
+7,2026-05-12,2026-05-12,Reversion Rango,GBPUSD,long,M30,1.2610,1.2590,1.2650,1.2650,100,200,TP,Rebote en soporte del rango
+8,2026-05-13,2026-05-13,Reversion Rango,GBPUSD,short,M30,1.2690,1.2710,1.2650,1.2710,100,-100,SL,Tendencia muy fuerte ese dia
+9,2026-05-14,2026-05-14,Ruptura Londres,EURUSD,long,M15,1.0820,1.0800,1.0860,1.0860,100,200,TP,Entrada de manual
+10,2026-05-15,2026-05-15,Pullback EMA,XAUUSD,short,H1,2340.0,2350.0,2315.0,2350.0,100,-100,SL,Contra tendencia no respeto mi plan
+11,2026-05-18,2026-05-18,Reversion Rango,GBPUSD,long,M30,1.2600,1.2580,1.2640,1.2580,100,-100,SL,Rango roto a la baja
+12,2026-05-19,2026-05-19,Ruptura Londres,EURUSD,short,M15,1.0840,1.0860,1.0800,1.0800,100,200,TP,Excelente ejecucion
