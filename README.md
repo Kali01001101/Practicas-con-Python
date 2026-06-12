@@ -76,6 +76,37 @@ El analizador te avisa solo cuando detecta:
 
 ---
 
+## 🤖 Bot simulador de órdenes
+
+Le "enseñás" a operar escribiendo directrices en `directrices.txt` y el bot
+las ejecuta sobre datos de precio reales, **sin dinero real**, registrando los
+resultados en el diario.
+
+- **1. Escribí tus directrices** en `directrices.txt`. Ejemplo (equivale a
+  *"en el 50% entre el máximo y el mínimo abrí una compra, SL y TP en X"*):
+
+  ```
+  estrategia: Ruptura Londres
+  activo: EURUSD
+  direccion: compra
+  entrada: 50% entre 1.0700 y 1.0800
+  sl: 1.0720
+  tp: 1.0810
+  riesgo_usd: 100
+  ```
+
+- **2. Exportá las velas desde TradingView:** abrí el gráfico → menú → *Exportar datos del gráfico* → CSV.
+- **3. Corré el bot:** `python3 bot_simulador.py directrices.txt velas.csv`
+- **4. El bot te informa** qué orden se activó, cuál cerró en TP/SL y cuál quedó pendiente, y **registra solo** los trades cerrados en `operaciones.csv` (marcados con `[BOT]`).
+- Para probar sin escribir en el diario: agregá `--solo-informe`.
+- Probalo ya mismo con los datos incluidos: `python3 bot_simulador.py directrices.txt velas_ejemplo.csv --solo-informe`
+
+> ⚠️ **Criterio conservador:** si una misma vela toca SL y TP, el bot cuenta
+> la pérdida (peor caso) y te lo señala. Usá velas de menor temporalidad para
+> resolver la ambigüedad.
+
+---
+
 ## ⚙️ Ajustes
 
 Los umbrales (muestra mínima, profit factor, R/R) están al inicio de

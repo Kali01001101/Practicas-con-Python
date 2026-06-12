@@ -1,0 +1,36 @@
+# DIRECTRICES DEL BOT
+# ===================
+# Cada bloque es una orden. Se separan con una linea en blanco.
+# Formato: clave: valor (una por linea). Lineas con # se ignoran.
+#
+# Claves obligatorias:
+#   estrategia  -> nombre de tu estrategia (igual que en operaciones.csv)
+#   activo      -> instrumento (debe coincidir con el CSV de velas que uses)
+#   direccion   -> compra o venta
+#   entrada     -> precio fijo (ej: 1.0750)
+#                  o nivel relativo: "50% entre 1.0700 y 1.0800"
+#                  (el % se mide desde el precio menor hacia el mayor)
+#   sl          -> precio del stop loss
+#   tp          -> precio del take profit
+#   riesgo_usd  -> cuanto arriesgas si salta el SL
+#
+# Opcional:
+#   notas       -> contexto que quieras dejar registrado
+
+estrategia: Ruptura Londres
+activo: EURUSD
+direccion: compra
+entrada: 50% entre 1.0700 y 1.0800
+sl: 1.0720
+tp: 1.0810
+riesgo_usd: 100
+notas: Retroceso al 50% del rango asiatico
+
+estrategia: Reversion Rango
+activo: EURUSD
+direccion: venta
+entrada: 1.0815
+sl: 1.0835
+tp: 1.0775
+riesgo_usd: 100
+notas: Venta en techo del rango
