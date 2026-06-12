@@ -107,6 +107,28 @@ resultados en el diario.
 
 ---
 
+## ⚡ Bot MT5 (ejecución en vivo)
+
+Coloca tus directrices como **órdenes pendientes reales en MetaTrader 5**,
+con SL/TP y lote calculado automáticamente según tu riesgo en USD.
+
+- **Requisitos (solo Windows):**
+  - MT5 instalado, **abierto y logueado** en tu cuenta.
+  - `pip install MetaTrader5`
+  - En MT5: *Herramientas → Opciones → Expert Advisors → permitir trading algorítmico*.
+- **Comandos:**
+  - `python bot_mt5.py colocar directrices.txt` → coloca las órdenes pendientes (elige solo BUY/SELL LIMIT o STOP según dónde esté el precio).
+  - `python bot_mt5.py estado` → muestra las órdenes y posiciones del bot.
+  - `python bot_mt5.py sincronizar` → baja los trades cerrados al diario `operaciones.csv` (etiquetados `[MT5]`, sin duplicar), listos para el analizador.
+- **Cómo funciona por dentro:**
+  - Usa el mismo formato de `directrices.txt` que el simulador (incluido el `50% entre X y X`).
+  - Calcula el **lote** para que, si salta el SL, pierdas ≈ tu `riesgo_usd` (te informa el riesgo real tras el redondeo del broker).
+  - Marca sus órdenes con un número mágico: **no toca tus operaciones manuales**.
+  - El nombre de la estrategia viaja en el comentario de la orden, así el cierre vuelve al diario con la estrategia correcta.
+  - Al conectar te informa si la cuenta es DEMO o REAL.
+
+---
+
 ## ⚙️ Ajustes
 
 Los umbrales (muestra mínima, profit factor, R/R) están al inicio de
